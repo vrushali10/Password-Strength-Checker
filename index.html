@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="branding">
+            <img src="logo.png" alt="Password Strength Checker Logo" class="logo">
+            <h1>Password Strength Checker</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2>Secure Your Passwords</h2>
+                <p>Use this tool to create and evaluate strong passwords for your online security.</p>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter your password" oninput="checkPasswordStrength()">
+                    <div id="strength-indicator">
+                        <div id="strength-bar"></div>
+                    </div>
+                    <p id="strength-text">Enter a password to check its strength</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

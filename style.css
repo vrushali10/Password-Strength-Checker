@@ -1,0 +1,153 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for centering */
+    margin: 0;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.branding {
+    display: flex;
+    flex-direction: column; /* Stack logo and title vertically */
+    align-items: center;    /* Center them horizontally */
+    justify-content: center; /* Center them vertically */
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 15px; /* Add spacing between logo and title */
+    margin-top: 15px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-out; /* Add fade-in animation */
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: center;
+}
+
+.password-container {
+    margin-top: 20px;
+}
+
+input[type="password"] {
+    width: 90%; /* Ensure full width within the container */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #5f76f3;
+    box-shadow: 0 5px 20px rgba(95, 118, 243, 0.3);
+}
+
+#strength-indicator {
+    width: 100%;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff4d4d, #ff884d, #ffd84d, #c8e93f, #4bd964);
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+#strength-text {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    #strength-text {
+        font-size: 14px;
+    }
+}
+
+/* Animations for more advanced look */
+@keyframes grow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="password"]::placeholder {
+    color: #bbb;
+    opacity: 1; /* Firefox */
+    transition: color 0.3s ease;
+}
+
+input[type="password"]:focus::placeholder {
+    color: #888;
+}
+
+input[type="password"]:hover {
+    box-shadow: 0 5px 20px rgba(95, 118, 243, 0.2);
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
