@@ -21,7 +21,7 @@ The Password Strength Checker is a web application that evaluates the strength o
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/password-strength-checker.git
+    git clone https://github.com/vrushali10/password-strength-checker.git
     cd password-strength-checker
     ```
 
@@ -78,7 +78,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Libraries Used**: Various open-source libraries for CSS and JavaScript.
 
 For any questions or support, please open an issue on the [GitHub repository](https://github.com/vrushali10/password-strength-checker/issues).
-
----
-
-Feel free to replace placeholder text (like `yourusername` and repository links) with actual values relevant to your project.
